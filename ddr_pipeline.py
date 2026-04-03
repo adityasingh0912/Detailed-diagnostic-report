@@ -34,7 +34,6 @@ def extract_text(path: str) -> str:
     with pdfplumber.open(path) as pdf:
         return "\n".join(p.extract_text() or "" for p in pdf.pages)
 
-
 def extract_thermal_readings(path: str) -> list[dict]:
     """
     Thermal PDF uses UTF-16 encoding — pdfplumber gets nothing.
@@ -107,7 +106,7 @@ def call_ai(insp_text: str, thermal_summary: str, api_key: str) -> dict:
 
     prompt = f"""
 INSPECTION REPORT:
-{insp_text[:12000]}
+{insp_text}
 
 THERMAL READINGS (extracted):
 {thermal_summary}
@@ -124,7 +123,8 @@ Return this exact JSON structure:
       "damage_observed": "string — visible symptoms",
       "source_identified": "string — what is causing it",
       "thermal_findings": "string — include Hotspot/Coldspot/Delta-T numbers if available, else Not Available",
-      "severity": "Critical|High|Medium|Low"
+      "severity": "Critical|High|Medium|Low",
+      "photo_indices": ["Array of integers (e.g., [1, 2, 3]) representing the Photo numbers explicitly mentioned in the text for this area"]
     }}
   ],
   "root_causes": [
@@ -266,7 +266,6 @@ def render(ddr: dict, insp_imgs: list[str], therm_imgs: list[str], output: str):
     story.append(section_header("2", "Area-wise Observations"))
     story.append(sp(8))
 
-    # Assign images: 2 inspection + 1 thermal per area
     obs_list = ddr.get("observations", [])
     for i, obs in enumerate(obs_list):
         block = []
@@ -282,13 +281,20 @@ def render(ddr: dict, insp_imgs: list[str], therm_imgs: list[str], output: str):
         else:
             block.append(Paragraph("Thermal findings: Not Available", small))
 
-        # Inspection images: pick 2 per area slot
-        img_start = i * 2
+        # Safely map the exact images identified by the AI
         row_imgs = []
-        for idx in [img_start, img_start + 1]:
-            if idx < len(insp_imgs):
-                ri = add_image(insp_imgs[idx], 78*mm, 58*mm)
-                if ri: row_imgs.append(ri)
+        photo_indices = obs.get("photo_indices", [])
+        
+        # Limit to the first 2 photos identified for layout purposes
+        for photo_num in photo_indices[:2]: 
+            try:
+                # Subtract 1 because "Photo 1" is at array index 0
+                array_idx = int(photo_num) - 1 
+                if 0 <= array_idx < len(insp_imgs):
+                    ri = add_image(insp_imgs[array_idx], 78*mm, 58*mm)
+                    if ri: row_imgs.append(ri)
+            except (ValueError, TypeError):
+                pass # Ignore if AI returns something that isn't a number
 
         # Thermal image: pick 1 per area slot
         therm_img = None
@@ -377,8 +383,8 @@ def render(ddr: dict, insp_imgs: list[str], therm_imgs: list[str], output: str):
 
     story.append(Table([[Paragraph(c, ParagraphStyle("th",fontName="Helvetica-Bold" if r==0 else "Helvetica",
                          fontSize=8.5,textColor=WHITE if r==0 else C_DARK,leading=13))
-                         for c in row]
-                        for r,row in enumerate(rows)],
+                        for c in row]
+                       for r,row in enumerate(rows)],
                        colWidths=col_w, style=t_style))
     story.append(sp(14))
 
