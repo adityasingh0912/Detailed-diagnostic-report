@@ -1,0 +1,91 @@
+{
+  "property_address": "Not Available",
+  "customer_name": "Not Available",
+  "inspection_date": "27.09.2022",
+  "property_summary": "The property has multiple areas with dampness, leakage, and hollowness issues. These issues are primarily observed in the skirting levels of various rooms, including the hall, bedroom, kitchen, and master bedroom. The common bathroom and external wall also show signs of damage, including cracks and seepage.",
+  "observations": [
+    {
+      "area": "Hall Skirting level",
+      "damage_observed": "Dampness",
+      "source_identified": "Concealed plumbing",
+      "thermal_findings": "Hotspot: 28.8C, Coldspot: 23.4C, Delta-T: 5.4C",
+      "severity": "Medium"
+    },
+    {
+      "area": "Bedroom Skirting level",
+      "damage_observed": "Dampness",
+      "source_identified": "Concealed plumbing",
+      "thermal_findings": "Hotspot: 27.4C, Coldspot: 22.4C, Delta-T: 5.0C",
+      "severity": "Medium"
+    },
+    {
+      "area": "Master Bedroom Skirting level",
+      "damage_observed": "Dampness",
+      "source_identified": "Concealed plumbing",
+      "thermal_findings": "Hotspot: 27.0C, Coldspot: 22.0C, Delta-T: 5.0C",
+      "severity": "Medium"
+    },
+    {
+      "area": "Kitchen Skirting level",
+      "damage_observed": "Dampness",
+      "source_identified": "Concealed plumbing",
+      "thermal_findings": "Hotspot: 25.7C, Coldspot: 20.7C, Delta-T: 5.0C",
+      "severity": "Low"
+    },
+    {
+      "area": "Common Bathroom",
+      "damage_observed": "Hollowness and plumbing issue",
+      "source_identified": "Concealed plumbing",
+      "thermal_findings": "Hotspot: 26.5C, Coldspot: 21.5C, Delta-T: 5.0C",
+      "severity": "High"
+    },
+    {
+      "area": "External wall",
+      "damage_observed": "Cracks and seepage",
+      "source_identified": "Not specified",
+      "thermal_findings": "Hotspot: 26.9C, Coldspot: 21.9C, Delta-T: 5.0C",
+      "severity": "High"
+    }
+  ],
+  "root_causes": [
+    {
+      "issue": "Dampness",
+      "cause": "Concealed plumbing"
+    },
+    {
+      "issue": "Hollowness",
+      "cause": "Concealed plumbing"
+    },
+    {
+      "issue": "Cracks and seepage",
+      "cause": "Not specified"
+    }
+  ],
+  "severity_summary": "The overall severity of the issues is Medium to High, with multiple areas showing signs of dampness, hollowness, and cracks. The concealed plumbing is identified as a primary cause of these issues, and immediate attention is required to prevent further damage.",
+  "actions": [
+    {
+      "priority": "Immediate",
+      "area": "Hall Skirting level",
+      "task": "Repair concealed plumbing"
+    },
+    {
+      "priority": "Short-term",
+      "area": "Bedroom Skirting level",
+      "task": "Repair concealed plumbing"
+    },
+    {
+      "priority": "Long-term",
+      "area": "External wall",
+      "task": "Repair cracks and seepage"
+    }
+  ],
+  "additional_notes": "The property requires immediate attention to address the dampness, hollowness, and cracks issues. A comprehensive repair plan should be implemented to prevent further damage.",
+  "missing_information": [
+    "Customer Name",
+    "Mobile",
+    "Email",
+    "Property Age (In years)",
+    "Previous Structural audit done details",
+    "Previous Repair work done details"
+  ]
+}

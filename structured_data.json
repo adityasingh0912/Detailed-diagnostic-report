@@ -1,0 +1,221 @@
+{
+    "inspection": [
+        {
+            "area": "1",
+            "issue": "Hall Skirting level Dampness",
+            "source": "Common Bathroom  tile  hollowness"
+        },
+        {
+            "area": "2",
+            "issue": "Bedroom Skirting level  Dampness",
+            "source": "Common Bathroom  tile  hollowness"
+        },
+        {
+            "area": "3",
+            "issue": "Master bedroom Skirting level  Dampness",
+            "source": "MB Bathroom tile hollowness"
+        },
+        {
+            "area": "4",
+            "issue": "Kitchen Skirting level  Dampness",
+            "source": "Master bedroom bathroom"
+        },
+        {
+            "area": "5",
+            "issue": "Master bedroom wall damness",
+            "source": "External wall crack and Duct  Issue"
+        },
+        {
+            "area": "6",
+            "issue": "Parking Area seepage",
+            "source": "Common Bathroom tile  hollowness and plumbing issue"
+        },
+        {
+            "area": "7",
+            "issue": "Common Bathroom  Ceiling  Dampness",
+            "source": "Flat no 203 tile joint open and"
+        }
+    ],
+    "thermal": [
+        {
+            "id": "RB02380X",
+            "hot": "28.8",
+            "cold": "23.4",
+            "delta": 5.4
+        },
+        {
+            "id": "RB02386X",
+            "hot": "27.4",
+            "cold": "22.4",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02395X",
+            "hot": "27",
+            "cold": "22",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02402X",
+            "hot": "25.7",
+            "cold": "20.7",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02403X",
+            "hot": "25.5",
+            "cold": "20.5",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02404X",
+            "hot": "25.8",
+            "cold": "20.8",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02405X",
+            "hot": "26.2",
+            "cold": "21.2",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02406X",
+            "hot": "26.5",
+            "cold": "21.5",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02392X",
+            "hot": "25.8",
+            "cold": "20.8",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02393X",
+            "hot": "25.9",
+            "cold": "20.9",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02394X",
+            "hot": "26",
+            "cold": "21",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02396X",
+            "hot": "26.1",
+            "cold": "21.1",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02397X",
+            "hot": "26.3",
+            "cold": "21.3",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02398X",
+            "hot": "25.6",
+            "cold": "20.6",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02399X",
+            "hot": "26.5",
+            "cold": "21.5",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02400X",
+            "hot": "25.2",
+            "cold": "20.2",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02401X",
+            "hot": "25.6",
+            "cold": "20.6",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02381X",
+            "hot": "27",
+            "cold": "22",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02382X",
+            "hot": "26.7",
+            "cold": "21.7",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02383X",
+            "hot": "26.5",
+            "cold": "21.5",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02384X",
+            "hot": "27.3",
+            "cold": "22.3",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02385X",
+            "hot": "27.3",
+            "cold": "22.3",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02387X",
+            "hot": "25.2",
+            "cold": "20.2",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02388X",
+            "hot": "25.1",
+            "cold": "20.1",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02389X",
+            "hot": "25.9",
+            "cold": "20.9",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02390X",
+            "hot": "26.9",
+            "cold": "21.9",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02391X",
+            "hot": "25.6",
+            "cold": "20.6",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02377X",
+            "hot": "26.9",
+            "cold": "21.9",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02378X",
+            "hot": "26.4",
+            "cold": "21.4",
+            "delta": 5.0
+        },
+        {
+            "id": "RB02379X",
+            "hot": "27.8",
+            "cold": "22.8",
+            "delta": 5.0
+        }
+    ]
+}
